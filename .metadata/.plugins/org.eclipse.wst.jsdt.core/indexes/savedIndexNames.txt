@@ -1,0 +1,6 @@
+INDEX VERSION 1.4+C:\Users\ib\eclipse-workspace\ProjetFilRouge\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3990833838.index
+2866863871.index
+1000087963.index
+48650899.index
+2676324108.index
