@@ -1,0 +1,10 @@
+package bo;
+
+public class Salle {
+	private int id;
+	private Adresse adresse;
+	private String nomSalle;
+	private Machine list<Machine>;
+	private int note;
+	
+}
