@@ -11,7 +11,7 @@ public class Adresse {
 	private String etage;
 	private int appartement;
 	
-	
+	// constructeur
 	public Adresse() {
 		super();
 	}
