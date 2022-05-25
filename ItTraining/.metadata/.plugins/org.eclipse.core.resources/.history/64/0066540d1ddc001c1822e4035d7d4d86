@@ -1,0 +1,26 @@
+package bo;
+
+import java.util.List;
+
+public class TableauDeBord {
+	private List<Formation> formations;
+	private List<Evaluation> evaluations;
+	private int noteAccueil;
+	private int noteEnvironement;
+	private int noteSalle; //Pouruoi une note pour la salle ?
+	private int noteMachine; //Pourquoi une note pour la machine ?
+	private int noteRepas; //Pourquoi une note pour le repas ?
+	private int noteModule;
+	private int noteFormation;
+	private int noteContenuModule;
+	private int noteFormateur;
+	private int notePedagogieFormateur;
+	private int noteMaitriseSujetFormateur;
+	private int noteDisponibilitéFormateur;
+	private int noteReponseFormateur;
+	private int noteAnimationFormateur;
+	private int noteSatisfaction;
+	private boolean resultatRecommandation;
+	private int resultatProjetFormation;
+
+}

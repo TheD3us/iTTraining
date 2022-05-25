@@ -1,0 +1,11 @@
+package bo;
+
+public class Machine {
+	private int id;
+	private int codeIdentification;
+	private String marque;
+	private String modele;
+	private Apprenant apprenant;
+	private int note;  //Pourquoi une note pour la machine ?
+	
+}
