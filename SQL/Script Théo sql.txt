@@ -1,0 +1,50 @@
+DROP TABLE personne;
+DROP TABLE apprenant;
+DROP TABLE formateur;
+DROP TABLE entreprise;
+
+CREATE TABLE personne ( 
+    id INTEGER AUTO_INCREMENT,
+    nom VARCHAR(60) NOT NULL,
+    prenom VARCHAR(60) NOT NULL,
+    adresse INTEGER NOT NULL,
+    mail VARCHAR(150) NOT NULL,
+    num_telephone VARCHAR(10) NOT NULL,
+    mot_de_passe VARCHAR(40) NOT NULL,
+    apprenant INTEGER,
+    formateur INTEGER,
+    PRIMARY KEY (id),
+    FOREIGN KEY (adresse) REFERENCES adresse(id),
+    FOREIGN KEY (apprenant) REFERENCES apprenant(id),
+    FOREIGN KEY (formateur) REFERENCES formateur(id)
+);
+
+CREATE TABLE apprenant (
+    id INTEGER AUTO_INCREMENT,
+    candidat_accepte BOOLEAN,
+    formation INTEGER NOT NULL,
+    machine INTEGER,
+    entreprise INTEGER,
+    PRIMARY KEY (id),
+    FOREIGN KEY (formation) REFERENCES formation(id),
+    FOREIGN KEY (machine) REFERENCES machine(id),
+    FOREIGN KEY (entreprise) REFERENCES entreprise(id)
+);
+
+CREATE TABLE formateur(
+    id INTEGER AUTO_INCREMENT,
+    module INTEGER NOT NULL,
+    machine INTEGER,
+    PRIMARY KEY (id),
+    FOREIGN KEY (module) REFERENCES module(id),
+    FOREIGN KEY (machine) REFERENCES machine(id)
+    );
+    
+CREATE TABLE entreprise(
+    id INTEGER AUTO_INCREMENT,
+    nom VARCHAR(60) NOT NULL,
+    siret INTEGER(14) NOT NULL UNIQUE,
+    adresse INTEGER NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (adresse) REFERENCES adresse(id)
+    );
