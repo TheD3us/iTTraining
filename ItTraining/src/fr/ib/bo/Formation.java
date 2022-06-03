@@ -35,7 +35,7 @@ public Formation ()	{
 			this.apprenant = apprenant;
 			this.salle = salle;
 			this.formateur = formateur;
-			this.theme = theme 
+			this.theme = theme; 
 			this.soustheme = soustheme;
 						
 		
@@ -142,5 +142,4 @@ public Formation ()	{
 	
 
 }
-© 2022 GitHub, Inc.
-Terms
+
