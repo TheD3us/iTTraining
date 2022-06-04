@@ -1,4 +1,4 @@
-package bo;
+package fr.ib.bo;
 
 public class Module {
 	
