@@ -1,6 +1,6 @@
-package bo;
+package fr.ib.bo;
 
-public class Personne {
+public abstract class Personne {
 	private int id;
 	private String nom;
 	private String prenom;
@@ -10,25 +10,6 @@ public class Personne {
 	private String motDePasse; 
 	private String role;
 	
-	
-	// Constructeurs
-	
-	public Personne() {
-		super();
-	}
-	
-	public Personne(int id, String nom, String prenom, Adresse adresse, String mail, String numTelephone,
-			String motDePasse, String role) {
-		super();
-		this.id = id;
-		this.nom = nom;
-		this.prenom = prenom;
-		this.adresse = adresse;
-		this.mail = mail;
-		this.numTelephone = numTelephone;
-		this.motDePasse = motDePasse;
-		this.role = role;
-	}
 	
 	
 	// Getter et Setters
