@@ -1,4 +1,4 @@
-package bo;
+package fr.ib.bo;
 
 import java.util.List;
 
@@ -13,7 +13,7 @@ public class TableauDeBord {
 	private int noteFormateur;
 	private int notePedagogieFormateur;
 	private int noteMaitriseSujetFormateur;
-	private int noteDisponibilitéFormateur;
+	private int noteDisponibiliteFormateur;
 	private int noteReponseFormateur;
 	private int noteAnimationFormateur;
 	private int noteSatisfaction;
@@ -30,7 +30,7 @@ public class TableauDeBord {
 	
 	public TableauDeBord(List<Formation> formations, List<Evaluation> evaluations, int noteAccueil,
 			int noteEnvironement, int noteModule, int noteFormation, int noteContenuModule, int noteFormateur, int notePedagogieFormateur, int noteMaitriseSujetFormateur,
-			int noteDisponibilitéFormateur, int noteReponseFormateur, int noteAnimationFormateur, int noteSatisfaction,
+			int noteDisponibiliteFormateur, int noteReponseFormateur, int noteAnimationFormateur, int noteSatisfaction,
 			boolean resultatRecommandation, int resultatProjetFormation) {
 		super();
 		this.formations = formations;
@@ -43,7 +43,7 @@ public class TableauDeBord {
 		this.noteFormateur = noteFormateur;
 		this.notePedagogieFormateur = notePedagogieFormateur;
 		this.noteMaitriseSujetFormateur = noteMaitriseSujetFormateur;
-		this.noteDisponibilitéFormateur = noteDisponibilitéFormateur;
+		this.noteDisponibiliteFormateur = noteDisponibiliteFormateur;
 		this.noteReponseFormateur = noteReponseFormateur;
 		this.noteAnimationFormateur = noteAnimationFormateur;
 		this.noteSatisfaction = noteSatisfaction;
@@ -135,12 +135,12 @@ public class TableauDeBord {
 		this.noteMaitriseSujetFormateur = noteMaitriseSujetFormateur;
 	}
 
-	public int getNoteDisponibilitéFormateur() {
-		return noteDisponibilitéFormateur;
+	public int getNoteDisponibiliteFormateur() {
+		return noteDisponibiliteFormateur;
 	}
 
-	public void setNoteDisponibilitéFormateur(int noteDisponibilitéFormateur) {
-		this.noteDisponibilitéFormateur = noteDisponibilitéFormateur;
+	public void setNoteDisponibiliteFormateur(int noteDisponibiliteFormateur) {
+		this.noteDisponibiliteFormateur = noteDisponibiliteFormateur;
 	}
 
 	public int getNoteReponseFormateur() {
