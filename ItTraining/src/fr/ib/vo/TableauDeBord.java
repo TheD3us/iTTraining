@@ -1,6 +1,9 @@
-package fr.ib.bo;
+package fr.ib.vo;
 
 import java.util.List;
+
+import fr.ib.bo.Evaluation;
+import fr.ib.bo.Formation;
 
 public class TableauDeBord {
 	private List<Formation> formations;
