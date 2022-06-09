@@ -1,6 +1,6 @@
 import { Formateur } from "./formateur";
 import { Formation} from "./formation";
-import { Module} from "./module";
+
 
 export class Module extends Formateur {
     private id: number;
