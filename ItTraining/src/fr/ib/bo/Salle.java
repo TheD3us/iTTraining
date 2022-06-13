@@ -1,5 +1,6 @@
 package fr.ib.bo;
 
+
 import java.util.List;
 
 public class Salle {
@@ -57,9 +58,6 @@ public class Salle {
 		this.machines = machines;
 	}
 
-	
-	
-	
-	
-	
+
 }
+
