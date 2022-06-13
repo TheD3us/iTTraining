@@ -32,25 +32,22 @@ public class Formateur extends Personne {
 		super();
 	}
 
-	public Formateur(Module module, Machine machine) {
-		super();
-		this.module = module;
-		this.machine = machine;
-	}
 	
 	
 	// Getters and Setters
 	
-	public Module getModule() {
-		return module;
-	}
 
-	public void setModule(Module module) {
-		this.module = module;
-	}
 
 	public Machine getMachine() {
 		return machine;
+	}
+
+	public List<Module> getModule() {
+		return module;
+	}
+
+	public void setModule(List<Module> module) {
+		this.module = module;
 	}
 
 	public void setMachine(Machine machine) {

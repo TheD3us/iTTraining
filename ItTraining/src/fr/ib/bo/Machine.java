@@ -1,19 +1,11 @@
 package fr.ib.bo;
 
-<<<<<<< HEAD
-=======
+
 import javax.persistence.CascadeType;
->>>>>>> 52704445f2d929cdfbebbd57d2a0914bb27013b0
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-<<<<<<< HEAD
-
-@Entity
-public class Machine {
-	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-=======
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
@@ -22,7 +14,6 @@ public class Machine {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
->>>>>>> 52704445f2d929cdfbebbd57d2a0914bb27013b0
 	private int id;
 	
 	private int codeIdentification;

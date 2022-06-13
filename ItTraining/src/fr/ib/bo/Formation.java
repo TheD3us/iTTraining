@@ -49,31 +49,7 @@ public Formation ()	{
 	super ();
 }
 	
-<<<<<<< HEAD
-	public Formation(int id, String nom, String prenom,LocalDate dateDebut, LocalDate dateDefin, String niveau, Test test, Apprenant apprenant,
-			Salle salle, Formateur formateur) {
-	
-			this.nom = nom;
-			this.prenom = prenom;
-			this.dateDebut = dateDebut;
-			this.dateDefin = dateDefin;
-			this.niveau = niveau;
-			this.test = test;
-			this.apprenant = apprenant;
-			this.salle = salle;
-			this.formateur = formateur;
-/*<<<<<<< HEAD
-			this.theme = theme; 
-			this.soustheme = soustheme;
-=======
-			//this.theme = theme 
-			//this.soustheme = soustheme;
->>>>>>> 0c07c109345c8c1351f8c105285addcf23da6870
-					*/	
-		
-		}
-=======
->>>>>>> 52704445f2d929cdfbebbd57d2a0914bb27013b0
+
 
 	public int getId() {
 		return id;

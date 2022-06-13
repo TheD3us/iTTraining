@@ -49,12 +49,16 @@ public class Module {
 	public void setNom(String nom) {
 		this.nom = nom;
 	}
-	public Formateur getFormateur() {
+
+	
+	public List<Formateur> getFormateur() {
 		return formateur;
 	}
-	public void setFormateur(Formateur formateur) {
+
+	public void setFormateur(List<Formateur> formateur) {
 		this.formateur = formateur;
 	}
+
 	public int getNote() {
 		return note;
 	}
