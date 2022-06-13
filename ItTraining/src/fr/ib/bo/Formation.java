@@ -23,8 +23,8 @@ public class Formation {
 		private Apprenant apprenant;
 		private Salle salle;
 		private Formateur formateur;
-		private Theme theme;
-		private SousTheme soustheme;
+		//private Theme theme;
+		//private SousTheme soustheme;
 		
 		// Constructeur
 		
@@ -33,7 +33,7 @@ public Formation ()	{
 }
 	
 	public Formation(int id, String nom, String prenom,LocalDate dateDebut, LocalDate dateDefin, String niveau, Test test, Apprenant apprenant,
-			Salle salle, Formateur formateur, Theme theme, SousTheme soustheme) {
+			Salle salle, Formateur formateur) {
 	
 			this.nom = nom;
 			this.prenom = prenom;
@@ -44,8 +44,12 @@ public Formation ()	{
 			this.apprenant = apprenant;
 			this.salle = salle;
 			this.formateur = formateur;
-			this.theme = theme; 
-			this.soustheme = soustheme;
+
+
+
+			//this.theme = theme 
+			//this.soustheme = soustheme;
+
 						
 		
 		}
@@ -130,21 +134,6 @@ public Formation ()	{
 		this.formateur = formateur;
 	}
 
-	public Theme getTheme() {
-		return theme;
-	}
-
-	public void setTheme(Theme theme) {
-		this.theme = theme;
-	}
-
-	public SousTheme getSoustheme() {
-		return soustheme;
-	}
-
-	public void setSoustheme(SousTheme soustheme) {
-		this.soustheme = soustheme;
-	}
 	
 	
 	
