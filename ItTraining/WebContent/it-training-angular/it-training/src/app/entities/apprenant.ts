@@ -6,9 +6,9 @@ import { Formation } from "./formation";
 //import { Entreprise } from "./entreprise";
 
 export class Apprenant extends Personne {
-    private id: number;
-    private candidatAccepte: boolean;
-    private formation: Formation;
-    private machine: Machine;
-    private entreprise: Entreprise;
+    
+    public candidatAccepte: boolean;
+    public formation: Formation;
+    public machine: Machine;
+
 }

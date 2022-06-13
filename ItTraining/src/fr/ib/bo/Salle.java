@@ -3,10 +3,30 @@ package fr.ib.bo;
 
 import java.util.List;
 
+
+import javax.persistence.CascadeType;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+
+@Entity
 public class Salle {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
+	
+	@OneToOne(cascade = CascadeType.PERSIST)
+	@JoinColumn(name="adresse")
 	private Adresse adresse;
 	private String nomSalle;
+	
+	@OneToMany(cascade = CascadeType.PERSIST)
+	@JoinColumn(name="machine")
 	private List<Machine> machines;
 		
 	//Constructeurs

@@ -1,12 +1,33 @@
 package fr.ib.bo;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
+
+
+@Entity
 public class Module {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String nom;
-	private Formateur formateur;
+	
+	@ManyToMany(cascade = CascadeType.PERSIST)
+	@JoinColumn(name="formateur")
+	private List<Formateur> formateur;
 	private int note;
-	private Module listeModule;
+	
+	@OneToMany(cascade = CascadeType.PERSIST)
+	@JoinColumn(name="module")
+	private List<Module> listeModule;
 	
 	
 // constructeur
@@ -15,16 +36,7 @@ public class Module {
 		
 		
 			}
-	public Module (int id, String nom, Formateur formateur, int note, Module listeModule) {
-		
-		
-		this.nom = nom;
-		this.formateur = formateur;
-		this.note = note;
-		this.listeModule = listeModule;
-		
-		
-	}
+
 	public int getId() {
 		return id;
 	}
@@ -37,24 +49,32 @@ public class Module {
 	public void setNom(String nom) {
 		this.nom = nom;
 	}
-	public Formateur getFormateur() {
+
+	
+	public List<Formateur> getFormateur() {
 		return formateur;
 	}
-	public void setFormateur(Formateur formateur) {
+
+	public void setFormateur(List<Formateur> formateur) {
 		this.formateur = formateur;
 	}
+
 	public int getNote() {
 		return note;
 	}
 	public void setNote(int note) {
 		this.note = note;
 	}
-	public Module getListeModule() {
+
+	public List<Module> getListeModule() {
 		return listeModule;
 	}
-	public void setListeModule(Module listeModule) {
+
+	public void setListeModule(List<Module> listeModule) {
 		this.listeModule = listeModule;
 	}
+
+	
 	
 	
 
