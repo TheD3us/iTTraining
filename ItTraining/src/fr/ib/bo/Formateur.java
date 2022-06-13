@@ -1,14 +1,29 @@
 package fr.ib.bo;
 
-<<<<<<< HEAD
+
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
+
+import javax.persistence.OneToOne;
 
 
-public class Formateur {
 
-=======
+
+@Entity
+@DiscriminatorValue(value="F")
 public class Formateur extends Personne {
-	private Module module;
+	
+	@ManyToMany(cascade = CascadeType.PERSIST)
+	@JoinColumn(name="module")
+	private List<Module> module;
+	
+	@OneToOne(cascade = CascadeType.PERSIST)
+	@JoinColumn(name="machine")
 	private Machine machine;
 	
 	
@@ -41,6 +56,5 @@ public class Formateur extends Personne {
 	public void setMachine(Machine machine) {
 		this.machine = machine;
 	}
-	
->>>>>>> efcd23d1b553493798e3b7b2e76a6d258e0776c9
+
 }

@@ -1,11 +1,16 @@
 package fr.ib.bo;
 
 import java.time.LocalDate;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Formation {
@@ -19,9 +24,21 @@ public class Formation {
 		private LocalDate dateDebut;
 		private LocalDate dateDefin;
 		private String niveau;
+		
+		@OneToOne(cascade = CascadeType.PERSIST)
+		@JoinColumn(name="test")
 		private Test test;
-		private Apprenant apprenant;
+		
+		@OneToMany(cascade = CascadeType.PERSIST)
+		@JoinColumn(name="formation")
+		private List<Apprenant> apprenant;
+		
+		@OneToOne(cascade = CascadeType.PERSIST)
+		@JoinColumn(name="salle")
 		private Salle salle;
+		
+		@OneToOne(cascade = CascadeType.PERSIST)
+		@JoinColumn(name="formateur")
 		private Formateur formateur;
 		//private Theme theme;
 		//private SousTheme soustheme;
@@ -32,27 +49,6 @@ public Formation ()	{
 	super ();
 }
 	
-	public Formation(int id, String nom, String prenom,LocalDate dateDebut, LocalDate dateDefin, String niveau, Test test, Apprenant apprenant,
-			Salle salle, Formateur formateur) {
-	
-			this.nom = nom;
-			this.prenom = prenom;
-			this.dateDebut = dateDebut;
-			this.dateDefin = dateDefin;
-			this.niveau = niveau;
-			this.test = test;
-			this.apprenant = apprenant;
-			this.salle = salle;
-			this.formateur = formateur;
-
-
-
-			//this.theme = theme 
-			//this.soustheme = soustheme;
-
-						
-		
-		}
 
 	public int getId() {
 		return id;
@@ -110,13 +106,17 @@ public Formation ()	{
 		this.test = test;
 	}
 
-	public Apprenant getApprenant() {
+
+
+	public List<Apprenant> getApprenant() {
 		return apprenant;
 	}
 
-	public void setApprenant(Apprenant apprenant) {
+
+	public void setApprenant(List<Apprenant> apprenant) {
 		this.apprenant = apprenant;
 	}
+
 
 	public Salle getSalle() {
 		return salle;
