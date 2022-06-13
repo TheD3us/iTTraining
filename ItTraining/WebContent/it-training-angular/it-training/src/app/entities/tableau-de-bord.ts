@@ -1,12 +1,12 @@
 import { Formation } from "./formation";
-import { Evaluation } from "./evaluation";
+
 
 export class TableauDeBord {
     public formation: Formation;
-    public evaluation: Evaluation;
+
     public noteAccueil: number;
     public noteEnvironement: number;
-    public noteAccueil: number;
+
     public noteModule: number;
     public noteFormation: number;
     public noteContenuModule: number;

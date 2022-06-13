@@ -64,7 +64,7 @@ public class AdresseController {
 			originalBDD.setNomVoie(adresse.getNomVoie());
 			originalBDD.setCpo(adresse.getCpo());
 			originalBDD.setVille(adresse.getVille());
-			originalBDD.setAppartement(adresse.getAppartement());
+
 			
 
 

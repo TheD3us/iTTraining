@@ -1,15 +1,18 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { AccueilComponent } from './accueil/accueil.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormationComponent } from './formation/formation.component';
+
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormationComponent,
+    AccueilComponent
+
     
   ],
   imports: [
