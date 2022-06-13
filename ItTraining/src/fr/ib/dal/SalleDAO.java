@@ -5,6 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import fr.ib.bo.Salle;
 
-public class SalleDAO extends JpaRepository<Salle, Integer> {
+@Repository
+public interface SalleDAO extends JpaRepository<Salle, Integer> {
     
 }

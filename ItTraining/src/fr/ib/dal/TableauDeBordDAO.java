@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import fr.ib.bo.TableauDeBord;
 
 @Repository
-public class TableauDeBordDAO extends JpaRepository<TableauDeBord, Integer>{
+public interface TableauDeBordDAO extends JpaRepository<TableauDeBord, Integer>{
     
 }
