@@ -1,6 +1,6 @@
 package fr.ib.bo;
 
-public class Formateur {
+public class Formateur extends Personne {
 	private Module module;
 	private Machine machine;
 	
