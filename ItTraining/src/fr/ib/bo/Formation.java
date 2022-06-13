@@ -35,14 +35,14 @@ public Formation ()	{
 			this.apprenant = apprenant;
 			this.salle = salle;
 			this.formateur = formateur;
-<<<<<<< HEAD
+/*<<<<<<< HEAD
 			this.theme = theme; 
 			this.soustheme = soustheme;
 =======
 			//this.theme = theme 
 			//this.soustheme = soustheme;
 >>>>>>> 0c07c109345c8c1351f8c105285addcf23da6870
-						
+					*/	
 		
 		}
 
