@@ -1,4 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+<<<<<<< HEAD
+        
+    <wb-module deploy-name="ItTraining-0.0.1-SNAPSHOT">
+                
+        <wb-resource deploy-path="/" source-path="/WebContent"/>
+                
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+                
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+                
+        <property name="java-output-path" value="/ItTraining/target/classes"/>
+                
+        <property name="context-root" value="ItTraining"/>
+            
+    </wb-module>
+    
+=======
                     
     
     
@@ -40,4 +58,5 @@
 
 
 
+>>>>>>> 12402b9f345d4d6d21bb6fa31ff259a2f1df2a57
 </project-modules>
