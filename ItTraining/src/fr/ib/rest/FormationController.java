@@ -55,17 +55,14 @@ public class FormationController {
 			// Je recupere l'instance telle qu'elle existe en bdd
 			Formation originalBDD = bll.selectById(id);
 			
-			originalBDD.setNom(nom.getNom());
-			originalBDD.setModule(module.getModule());
-			originalBDD.setdateDeDebut(dateDeDebut.getDateDeDebut());
-			originalBDD.setdateDeFin(dateDeFin.getdateDeFin());
-			originalBDD.setNiveau(niveau.getNiveau());
-			originalBDD.setTest(test.getTest());
-			originalBDD.setApprenant(apprenant.getApprenant());
-			originalBDD.setSalle(salle.getSalle());
-			originalBDD.setFormateur(formateur.getFormateur());
-			originalBDD.setTheme(theme.getTheme());
-			originalBDD.setSousTheme(soustheme.getSousTheme());
+			originalBDD.setNom(formation.getNom());
+			originalBDD.setModule(formation.getModule());
+			originalBDD.setNiveau(formation.getNiveau());
+			originalBDD.setTest(formation.getTest());
+			originalBDD.setApprenant(formation.getApprenant());
+			originalBDD.setSalle(formation.getSalle());
+			originalBDD.setFormateur(formation.getFormateur());
+
 			
 			bll.update(originalBDD);
 			return new ResponseEntity<Formation>(formation, HttpStatus.OK);

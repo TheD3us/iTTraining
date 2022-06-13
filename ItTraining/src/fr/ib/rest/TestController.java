@@ -55,8 +55,8 @@ public class TestController {
 			// Je recupere l'instance telle qu'elle existe en bdd
 			Test originalBDD = bll.selectById(id);
 			
-			originalBDD.setcheminTest(chemintest.getcheminTest());
-			originalBDD.setreponseTest(reponsetest.getreponseTest());
+			originalBDD.setCheminTest(test.getCheminTest());
+			originalBDD.setResponseTest(test.getResponseTest());
 	
 			
 			bll.update(originalBDD);

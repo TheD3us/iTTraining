@@ -30,6 +30,10 @@ public class Formation {
 		private Test test;
 		
 		@OneToMany(cascade = CascadeType.PERSIST)
+		@JoinColumn(name="module")
+		private List<Module> module;
+		
+		@OneToMany(cascade = CascadeType.PERSIST)
 		@JoinColumn(name="formation")
 		private List<Apprenant> apprenant;
 		
@@ -66,6 +70,19 @@ public Formation ()	{
 	public void setNom(String nom) {
 		this.nom = nom;
 	}
+	
+	
+	public List<Module> getModule() {
+		return module;
+	}
+
+
+
+	public void setModule(List<Module> module) {
+		this.module = module;
+	}
+
+
 
 	public String getPrenom() {
 		return prenom;
