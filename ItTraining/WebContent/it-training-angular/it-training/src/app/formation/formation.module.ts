@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ListFormationComponent } from './list-formation/list-formation.component';
+import { FormationRoutingModule } from './formation-routing.module';
 
 
 
@@ -9,6 +10,7 @@ import { ListFormationComponent } from './list-formation/list-formation.componen
     ListFormationComponent
   ],
   imports: [
+    FormationRoutingModule,
     CommonModule
   ]
 })
