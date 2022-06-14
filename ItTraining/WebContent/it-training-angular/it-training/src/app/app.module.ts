@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { RouterModule} from '@angular/router';
+
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
+    FlexLayoutModule,
     BrowserModule,
     AppRoutingModule,
     NgbModule
