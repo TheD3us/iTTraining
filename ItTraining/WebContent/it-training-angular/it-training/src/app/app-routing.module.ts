@@ -5,8 +5,10 @@ const routes: Routes = [
   { path: '', redirectTo: '/accueil', pathMatch: 'full' },
   {path: 'accueil',
   loadChildren: () => import('./accueil/accueil.module').then(m => m.AccueilModule)
+  },
+  { path: 'connexion', 
+loadChildren: () => import('./connexion/connexion.module').then(m=> m.ConnexionModule)
   }
-  
 ];
 
 @NgModule({
@@ -14,3 +16,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+

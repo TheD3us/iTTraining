@@ -14,4 +14,4 @@ const routes: Routes = [
        exports: [RouterModule]
    })
    
-   export class FormationRoutingModule { }
+   export class AccueilRoutingModule { }

@@ -11,9 +11,9 @@ import { FormationService } from '../service/formation.service';
 
 export class ListFormationComponent {
 
-  constructor(private formationService : FormationService) { }
+  constructor() { }
 
-   public _formation = this.formationService.GetAllFormation();  
+   //public _formation = this.formationService.GetAllFormation();  
 
 
 

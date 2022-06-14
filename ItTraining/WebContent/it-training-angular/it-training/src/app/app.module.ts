@@ -13,14 +13,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    CandidatComponent,
-
-    ConnexionComponent,
-
-    AccueilComponent
-    
-  ],
+    AppComponent
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
