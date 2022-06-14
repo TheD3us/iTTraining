@@ -7,9 +7,7 @@ import javax.persistence.Id;
 
 @Entity
 public class Adresse {
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 
 	private int noRue;

@@ -17,8 +17,6 @@ import org.springframework.web.bind.annotation.RestController;
 import fr.ib.bll.AdresseBll;
 import fr.ib.bo.Adresse;
 
-
-
 @RestController
 @RequestMapping("/adresse")
 public class AdresseController {
@@ -64,7 +62,7 @@ public class AdresseController {
 			originalBDD.setNomVoie(adresse.getNomVoie());
 			originalBDD.setCpo(adresse.getCpo());
 			originalBDD.setVille(adresse.getVille());
-			originalBDD.setAppartement(adresse.getAppartement());
+
 			
 
 

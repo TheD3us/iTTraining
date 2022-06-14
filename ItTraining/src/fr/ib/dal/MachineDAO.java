@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import fr.ib.bo.Machine;
 
 @Repository
-public class MachineDAO extends JpaRepository<Machine, Integer> {
+public interface MachineDAO extends JpaRepository<Machine, Integer> {
     
 }
