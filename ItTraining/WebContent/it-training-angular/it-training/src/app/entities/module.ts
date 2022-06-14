@@ -2,10 +2,10 @@ import { Formateur } from "./formateur";
 import { Formation} from "./formation";
 
 
-export class Module extends Formateur {
-    private id: number;
-    private nom: string;
-    private formateur: Formateur;
-    private note: number;
-    private listeModule: Module;
+export class Module {
+    public id: number | undefined;
+    public nom: string;
+    public formateur: Formateur;
+    public note: number;
+    public listeModule: Module;
 }

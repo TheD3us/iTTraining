@@ -1,7 +1,7 @@
 import { Adresse } from "./adresse";
 
 export class Personne {
-    private id: number;
+    public id: number;
     private nom: string;
     private prenom: number;
     private adresse: Adresse;

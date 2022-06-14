@@ -1,9 +1,9 @@
-import { Formation} from "./formation";
 
 
-export class Test extends Formation {
-    private id: number;
-    private cheminTest: string;
-    private responseTest: boolean;
+
+export class Test {
+    public id: number;
+    public cheminTest: string;
+    public responseTest: boolean;
    
 }

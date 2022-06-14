@@ -1,3 +1,4 @@
+import { Adresse } from "./adresse";
 import { Machine } from "./machine";
 
 
