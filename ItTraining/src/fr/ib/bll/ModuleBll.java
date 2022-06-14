@@ -1,11 +1,11 @@
 package fr.ib.bll;
-
+import fr.ib.bo.Module;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import fr.ib.bo.Module;
+
 import fr.ib.dal.ModuleDAO;
 
 @Service

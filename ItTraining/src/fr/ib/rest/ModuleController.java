@@ -56,10 +56,10 @@ public class ModuleController {
 			// Je recupere l'instance telle qu'elle existe en bdd
 			Module originalBDD = bll.selectById(id);
 			
-			originalBDD.setNom(nom.getNom());
-			originalBDD.setFormateur(formateur.getFormateur());
+			originalBDD.setNom(module.getNom());
+			originalBDD.setFormateur(module.getFormateur());
 			//originalBDD.setNote(note.getNote());
-			originalBDD.setListeModule(listemodule.getListeModule());
+			originalBDD.setListeModule(module.getListeModule());
 		
 			
 			

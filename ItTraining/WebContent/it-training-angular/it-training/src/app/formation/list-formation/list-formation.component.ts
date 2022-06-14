@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { Formation } from 'src/app/entities/formation';
+
 import { FormationService } from '../service/formation.service';
 
 @Component({

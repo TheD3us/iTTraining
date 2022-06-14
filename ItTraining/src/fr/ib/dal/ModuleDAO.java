@@ -1,19 +1,14 @@
-package dal;
-
-
-******************
 package fr.ib.dal;
 
-import bo.Contact;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface ContactDAO {
-	Contact select(int id);
-	void insert(Contact contact);
-	void delete(int id);
-	void update(Contact contact);
-}
-*******************
+import org.springframework.stereotype.Repository;
 
-public class ModuleDAO {
+import fr.ib.bo.Module;
+
+@Repository
+public interface ModuleDAO extends JpaRepository<Module, Integer> {
+
+
 
 }
