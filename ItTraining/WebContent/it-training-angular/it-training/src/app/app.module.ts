@@ -9,6 +9,7 @@ import { FormationComponent } from './formation/formation.component';
 import { CoreComponent } from './candidat/core.component';
 import { CandidatComponent } from './candidat/candidat.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ConnexionComponent } from './connexion/connexion/connexion.component';
 =======
 
 
@@ -22,6 +23,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     FormationComponent,
     CoreComponent,
     CandidatComponent,
+    ConnexionComponent,
 =======
     AccueilComponent
 
