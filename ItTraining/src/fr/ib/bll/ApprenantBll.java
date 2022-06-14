@@ -5,8 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import fr.ib.bo.Formateur;
-import fr.ib.dal.FormateurDAO;
+import fr.ib.bo.Apprenant;
+import fr.ib.dal.ApprenantDAO;
 
 @Service
 public class ApprenantBll {
@@ -22,7 +22,7 @@ public class ApprenantBll {
 	}
 	
 	public void update(Apprenant apprenant) {
-		dao.save(formateur);
+		dao.save(apprenant);
 	}
 	
 	public void insert(Apprenant apprenant) {

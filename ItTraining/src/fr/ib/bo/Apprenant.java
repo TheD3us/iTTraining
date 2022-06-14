@@ -1,9 +1,29 @@
 package fr.ib.bo;
 
+
+import javax.persistence.CascadeType;
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+import javax.persistence.OneToOne;
+
+@Entity
+@DiscriminatorValue(value="A")
 public class Apprenant extends Personne {
 	private boolean candidatAccepte;
+	
+	@ManyToOne(cascade = CascadeType.PERSIST)
+	@JoinColumn(name="formation")
 	private Formation formation;
+	
+	@OneToOne(cascade = CascadeType.PERSIST)
+	@JoinColumn(name="machine")
 	private Machine machine;
+	
+	@ManyToOne(cascade = CascadeType.PERSIST)
+	@JoinColumn(name="entreprise")
 	private Entreprise entreprise;
 	
 	
@@ -54,7 +74,5 @@ public class Apprenant extends Personne {
 	
 	
 	//Getters & Setters 
-	
-	
-	
+
 }
