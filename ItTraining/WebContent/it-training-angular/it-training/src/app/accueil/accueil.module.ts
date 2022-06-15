@@ -7,14 +7,9 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 
-
-
-
-
-
-
 @NgModule({
   declarations: [
+
 
     AccueilComponent
   ],
@@ -24,6 +19,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     AccueilRoutingModule,
     CommonModule
 
-  ]
+    ]
+
 })
 export class AccueilModule { }

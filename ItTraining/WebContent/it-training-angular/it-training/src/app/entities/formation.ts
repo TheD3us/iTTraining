@@ -16,6 +16,8 @@ export class Formation  {
     public apprenant: Apprenant;
     public salle: Salle;
     public formateur: Formateur;
-    //public theme:string;
-    //public sousTheme:string;
+
+    //private theme:string;
+    //private sousTheme:string;
+
 }

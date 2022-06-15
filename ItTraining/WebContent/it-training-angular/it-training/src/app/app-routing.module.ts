@@ -3,6 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 
 
 const routes: Routes = [
+  {path:'compte',
+  loadChildren: () => import ('./candidat/candidat.module').then(m => m.CandidatModule)
+  },
 
   { path: 'connexion', 
 loadChildren: () => import('./connexion/connexion.module').then(m=> m.ConnexionModule)
@@ -19,6 +22,9 @@ loadChildren: () => import('./connexion/connexion.module').then(m=> m.ConnexionM
       loadChildren: () => import('./formation/formation.module').then(m => m.FormationModule) 
   
   }
+
+
+
 
 ];
 
