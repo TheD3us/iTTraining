@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Formation } from 'src/app/entities/formation';
 
 import { FormationService } from '../service/formation.service';
 
@@ -9,14 +11,16 @@ import { FormationService } from '../service/formation.service';
 })
 
 
-export class ListFormationComponent {
+export class ListFormationComponent implements OnInit {
+  public formation$ : Observable<Formation[]>;
+  
+  constructor(private formationService : FormationService,
+    ) { }
+  ngOnInit(): void {
+    this.formation$ = this.formationService.GetAllFormation();
+  }
 
-  constructor() { }
 
 
- //  public _formation = this.formationService.GetAllFormation();  
+  }
 
-
-
-
-}

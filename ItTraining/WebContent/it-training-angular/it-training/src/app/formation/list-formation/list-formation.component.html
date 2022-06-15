@@ -1,0 +1,33 @@
+<button class="btn-primary" [routerLink]="'create'">Ajouter Formation</button>
+<h1>Liste des Formations</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Module</th>
+            <th>Date de debut</th>
+            <th>Date de fin</th>
+            <th>niveau</th>
+            <th>Test</th>
+            <th>Apprenants</th>
+            <th>Salle</th>
+            <th>Formateur</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor=" let formation of formation$ | async">
+            <th>{{formation.nom}}</th>
+            <th>{{formation.module}}</th>
+            <th>{{formation.dateDeDebut}}</th>
+            <th>{{formation.dateDeFin}}</th>
+            <th>{{formation.niveau}}</th>
+            <th>{{formation.test}}</th>
+            <th>{{formation.apprenant}}</th>
+            <th>{{formation.salle}}</th>
+            <th>{{formation.formateur}}</th>
+            <th><button type="submit" class="btn btn-success" [routerLink]="['update', formation.id]">Modifier</button></th>
+            <th><button type="submit" class="btn btn-danger" [routerLink]="['delete', formation.id]">Supprimer</button></th>
+        </tr>
+
+    </tbody>
+</table>

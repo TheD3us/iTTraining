@@ -8,6 +8,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { ConnexionComponent } from './connexion/connexion.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { CandidatComponent } from './candidat/candidat.component';
+import { ModalComponent } from './core/modal/modal.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -16,6 +18,7 @@ import { CandidatComponent } from './candidat/candidat.component';
   ],
   
   imports: [
+    HttpClientModule,
     FlexLayoutModule,
     BrowserModule,
     AppRoutingModule,
