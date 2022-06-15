@@ -1,11 +1,31 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [
 
-  {path: 'accueil',
-  loadChildren: () => import('./accueil/accueil.module').then(m => m.AccueilModule)
+const routes: Routes = [
+  {path:'compte',
+  loadChildren: () => import ('./candidat/candidat.module').then(m => m.CandidatModule)
+  },
+
+  { path: 'connexion', 
+loadChildren: () => import('./connexion/connexion.module').then(m=> m.ConnexionModule)
+
+  },
+
+  {
+    path: 'accueil',
+      loadChildren: () => import('./accueil/accueil.module').then(m => m.AccueilModule)
+
+  },
+  {
+    path: '**', 
+      loadChildren: () => import('./formation/formation.module').then(m => m.FormationModule) 
+  
   }
+
+
+
+
 ];
 
 @NgModule({
@@ -13,3 +33,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+

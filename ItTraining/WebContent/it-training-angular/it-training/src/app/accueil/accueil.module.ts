@@ -1,20 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Formation } from '../entities/formation';
-import { AccueilComponent } from './accueil.component';
-import { ListFormationComponent } from '../formation/list-formation/list-formation.component';
 import { FormationModule } from '../formation/formation.module';
-
+import { AccueilRoutingModule } from './accueil-routing.module';
+import { AccueilComponent } from './accueil.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 @NgModule({
   declarations: [
 
-    ListFormationComponent
+
+    AccueilComponent
   ],
   imports: [
-    FormationModule,
+    FlexLayoutModule,
+    CarouselModule,
+    AccueilRoutingModule,
     CommonModule
-  ]
+
+    ]
+
 })
 export class AccueilModule { }

@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu|Varela+Round');
+
+// base
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+a:link, 
+a:visited, 
+a:hover, 
+a:active {
+  text-decoration: none;
+}
+
+h1 {
+	font-family: 'Varela Round', sans-serif;
+	color: white;
+	text-align: center;
+	margin: 0 0 4rem;
+	font-size: 2.1rem;
+}
+
+h2 {
+  font-family: 'Ubuntu', sans-serif;
+	color: #595959;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+	color: grey;
+	margin: 0;
+}
+
+section {
+	height: 100vh;
+	width: 100%;
+	background-color: #80ce96;
+	padding: 2rem 0 0;
+}
+
+//end base
+
+.card {
+	display: block;
+	width: 30rem;
+	height: 20rem;
+	margin: 0 auto;
+	background-color: white;
+	border-radius: 10px;
+	overflow: hidden;
+	text-align: center;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+	transition: all 0.3s;
+	
+	&:hover {
+	box-shadow: 0 6px 6px 0 rgba(0,0,0,.14),0 7px 5px -2px rgba(0,0,0,.2),0 5px 9px 0 rgba(0,0,0,.12);
+	top: -4px;
+	transform: translateY(-4px);
+	}
+
+	&:active {
+		box-shadow: 0 0 0 0 rgba(0,0,0,.14),0 0 0 0  rgba(0,0,0,.2),0 0 0 0  rgba(0,0,0,.12);
+		transform: translateY(4px);
+	}
+	
+	.image {
+		background-color: white;
+		height: 13rem;
+		width: 100%;
+		padding: 0rem;
+		margin: 0;
+		box-sizing: border-box;
+		overflow: hidden;
+	}
+	
+	.text {
+		padding: 0.5rem;
+	}
+}
+
+.card1{
+    display: inline-block;
+    padding: 40px;
+}
+
+.test{
+    height: 100%;
+    padding-top: 0px;
+}
+
+.titre-section{
+    z-index: 10;
+}
