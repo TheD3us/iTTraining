@@ -2,3 +2,16 @@ footer
 {
     background-color: gainsboro;
 }
+
+#select-menu div
+{
+    position: absolute;
+    visibility: collapse;
+}
+
+#select-menu:hover div
+{
+    position: relative;
+    visibility: visible;
+}
+
