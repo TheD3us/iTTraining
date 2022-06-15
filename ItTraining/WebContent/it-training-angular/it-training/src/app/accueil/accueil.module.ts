@@ -6,6 +6,7 @@ import { FormationModule } from '../formation/formation.module';
 import { AccueilRoutingModule } from './accueil-routing.module';
 import { AccueilComponent } from './accueil.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 
@@ -16,7 +17,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     AccueilComponent
   ],
   imports: [
-
+    FlexLayoutModule,
     CarouselModule,
     AccueilRoutingModule,
     FormationModule,
