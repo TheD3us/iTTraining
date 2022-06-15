@@ -4,6 +4,11 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
 
+  { path: 'connexion', 
+loadChildren: () => import('./connexion/connexion.module').then(m=> m.ConnexionModule)
+
+  },
+
   {
     path: 'accueil',
       loadChildren: () => import('./accueil/accueil.module').then(m => m.AccueilModule)
@@ -12,8 +17,9 @@ const routes: Routes = [
   {
     path: '**', 
       loadChildren: () => import('./formation/formation.module').then(m => m.FormationModule) 
-  }
   
+  }
+
 ];
 
 @NgModule({
@@ -21,3 +27,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+

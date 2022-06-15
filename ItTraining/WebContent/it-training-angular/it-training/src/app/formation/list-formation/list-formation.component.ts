@@ -13,7 +13,9 @@ export class ListFormationComponent {
 
   constructor() { }
 
+
  //  public _formation = this.formationService.GetAllFormation();  
+
 
 
 
