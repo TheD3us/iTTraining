@@ -15,3 +15,4 @@ export class UpdateSalleComponent implements OnInit {
     
   }
 }
+

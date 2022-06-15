@@ -30,4 +30,3 @@ export class SalleService {
 
   constructor(private http: HttpClient) { }
 }
-
