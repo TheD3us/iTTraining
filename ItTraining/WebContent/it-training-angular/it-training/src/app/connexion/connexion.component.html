@@ -1,17 +1,23 @@
 
-
-<h1>Se connecter</h1>
-
-<form class="text-center border border-light p-5">
-    <!-- Email -->
-    <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
-    <!-- Password -->
-    <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
-    <div class="d-flex justify-content-around">
-        </div>
-    <!-- Sign in button -->
-    <button mdbBtn color="info" block="true" class="my-4" type="submit">Enregistrer</button>
-</form>
-
     <!--Bouton redirection création du compte-->
    <!-- <button [routerLink]="'candidat'"> Créer un compte</button> -->
+   <div class="wrapper">
+
+    <div class="text-center mt-4 name">
+        <h1>Se connecter</h1>
+    </div>
+    <form class="p-3 mt-3">
+        <div class="form-field d-flex align-items-center">
+            <span class="far fa-user"></span>
+            <input type="text" name="userName" id="userName" placeholder="Username">
+        </div>
+        <div class="form-field d-flex align-items-center">
+            <span class="fas fa-key"></span>
+            <input type="password" name="password" id="pwd" placeholder="Password">
+        </div>
+        <button class="btn mt-3">Enregistrer</button>
+    </form>
+    <div class="text-center fs-6">
+        <a href="#">Forget password?</a> or <a href="#">Sign up</a>
+    </div>
+</div>
