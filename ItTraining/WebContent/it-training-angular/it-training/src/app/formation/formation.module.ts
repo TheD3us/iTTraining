@@ -5,10 +5,10 @@ import { FormationRoutingModule } from './formation-routing.module';
 
 
 
+
 @NgModule({
   declarations: [
-    ListFormationComponent
-  ],
+      ],
   imports: [
     FormationRoutingModule,
     CommonModule
