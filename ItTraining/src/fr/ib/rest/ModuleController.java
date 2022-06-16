@@ -60,6 +60,7 @@ public class ModuleController {
 			originalBDD.setFormateur(module.getFormateur());
 			//originalBDD.setNote(note.getNote());
 			originalBDD.setListeModule(module.getListeModule());
+			//originalBDD.setListeFormation(module.getListeFormation());
 		
 			
 			

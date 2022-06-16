@@ -11,6 +11,8 @@ import javax.persistence.ManyToMany;
 
 import javax.persistence.OneToOne;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 
 
@@ -20,6 +22,7 @@ public class Formateur extends Personne {
 	
 	@ManyToMany(cascade = CascadeType.PERSIST)
 	@JoinColumn(name="module")
+	@JsonIgnore
 	private List<Module> module;
 	
 	@OneToOne(cascade = CascadeType.PERSIST)

@@ -8,7 +8,7 @@ import { Module } from "./module";
 export class Formation  {
     public id: number;
     public nom: string;
-    public module: Module;
+    public module: Module[];
     public dateDeDebut: Date;
     public dateDeFin: Date;
     public niveau: string;
