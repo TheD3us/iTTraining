@@ -1,22 +1,28 @@
 package fr.ib.bo;
 
 
+import java.util.List;
+
 import javax.persistence.CascadeType;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
 import javax.persistence.OneToOne;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @DiscriminatorValue(value="A")
 public class Apprenant extends Personne {
 	private boolean candidatAccepte;
 	
-	@ManyToOne(cascade = CascadeType.PERSIST)
+	@ManyToMany(cascade = CascadeType.PERSIST)
 	@JoinColumn(name="formation")
-	private Formation formation;
+	@JsonIgnore
+	private List<Formation> formation;
 	
 	@OneToOne(cascade = CascadeType.PERSIST)
 	@JoinColumn(name="machine")
@@ -32,13 +38,7 @@ public class Apprenant extends Personne {
 		super();
 	}
 
-	public Apprenant(boolean candidatAccepte, Formation formation, Machine machine, Entreprise entreprise) {
-		super();
-		this.candidatAccepte = candidatAccepte;
-		this.formation = formation;
-		this.machine = machine;
-		this.entreprise = entreprise;
-	}
+
 
 	public boolean isCandidatAccepte() {
 		return candidatAccepte;
@@ -48,13 +48,19 @@ public class Apprenant extends Personne {
 		this.candidatAccepte = candidatAccepte;
 	}
 
-	public Formation getFormation() {
+	
+
+	public List<Formation> getFormation() {
 		return formation;
 	}
 
-	public void setFormation(Formation formation) {
+
+
+	public void setFormation(List<Formation> formation) {
 		this.formation = formation;
 	}
+
+
 
 	public Machine getMachine() {
 		return machine;

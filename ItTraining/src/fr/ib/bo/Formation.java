@@ -1,16 +1,21 @@
 package fr.ib.bo;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToOne;
+
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 
 @Entity
 public class Formation {
@@ -20,7 +25,7 @@ public class Formation {
 		private int id;
 
 		private String nom;
-		private String prenom;		
+
 		private LocalDate dateDebut;
 		private LocalDate dateDefin;
 		private String niveau;
@@ -29,13 +34,13 @@ public class Formation {
 		@JoinColumn(name="test")
 		private Test test;
 		
-		@OneToMany(cascade = CascadeType.PERSIST)
-		@JoinColumn(name="module")
-		private List<Module> module;
+		@ManyToMany(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
+		@Fetch(value = FetchMode.SUBSELECT)
+		private List<Module> module = new ArrayList<Module>();
 		
-		@OneToMany(cascade = CascadeType.PERSIST)
-		@JoinColumn(name="formation")
-		private List<Apprenant> apprenant;
+		@ManyToMany(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
+		@Fetch(value = FetchMode.SUBSELECT)
+		private List<Apprenant> apprenant = new ArrayList<Apprenant>();
 		
 		@OneToOne(cascade = CascadeType.PERSIST)
 		@JoinColumn(name="salle")
@@ -83,14 +88,6 @@ public Formation ()	{
 	}
 
 
-
-	public String getPrenom() {
-		return prenom;
-	}
-
-	public void setPrenom(String prenom) {
-		this.prenom = prenom;
-	}
 
 	public LocalDate getDteDebut() {
 		return dateDebut;
