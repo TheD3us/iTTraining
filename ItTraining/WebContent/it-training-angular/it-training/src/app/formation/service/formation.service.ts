@@ -12,20 +12,20 @@ export class FormationService {
 
 
   public AddFormation( formation : Observable<Formation>): void {
-    this.http.post<Formation>('http://localhost:8080/ItTraining/formation', formation);
+    this.http.post<Formation>(`http://localhost:8080/ItTraining/rest/formation`, formation);
 
   }
 
   public GetAllFormation() : Observable<Formation[]>{
-    return this.http.get<Formation[]>('http://localhost:8080/ItTraining/formation');
+    return this.http.get<Formation[]>(`http://localhost:8080/ItTraining/rest/formation`);
   }
 
   public DeleteFormation(id : number){
-    this.http.delete<Formation>('http://localhost:8080/ItTraining/formation/${id}');
+    this.http.delete<Formation>(`http://localhost:8080/ItTraining/rest/formation/${id}`);
   }
 
   public GetFormation(id : number){
-    return this.http.get<Formation>('http://localhost:8080/ItTraining/formation/${id}');
+    return this.http.get<Formation>(`http://localhost:8080/ItTraining/rest/formation/${id}`);
   }
 
   public UpdateFormation(formation : Observable<Formation>) {

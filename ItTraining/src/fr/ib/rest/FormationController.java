@@ -24,7 +24,8 @@ public class FormationController {
 	
 	@GetMapping
 	public ResponseEntity<List<Formation>> findAll() {
-		return new ResponseEntity<List<Formation>>(bll.selectAll(), HttpStatus.OK);
+		List<Formation> forms = bll.selectAll();
+		return new ResponseEntity<List<Formation>>(forms, HttpStatus.OK);
 	}
 	
 	@GetMapping(value = "/{id}")
@@ -62,7 +63,8 @@ public class FormationController {
 			originalBDD.setApprenant(formation.getApprenant());
 			originalBDD.setSalle(formation.getSalle());
 			originalBDD.setFormateur(formation.getFormateur());
-
+			originalBDD.setDteDebut(formation.getDteDebut());
+			originalBDD.setDteDefin(formation.getDteDefin());
 			
 			bll.update(originalBDD);
 			return new ResponseEntity<Formation>(formation, HttpStatus.OK);
