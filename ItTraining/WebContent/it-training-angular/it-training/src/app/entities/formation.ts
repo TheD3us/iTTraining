@@ -9,8 +9,8 @@ export class Formation  {
     public id: number;
     public nom: string;
     public module: Module[];
-    public dateDeDebut: Date;
-    public dateDeFin: Date;
+    public dteDebut: Date;
+    public dteDefin: Date;
     public niveau: string;
     public test: Test;
     public apprenant: Apprenant[];

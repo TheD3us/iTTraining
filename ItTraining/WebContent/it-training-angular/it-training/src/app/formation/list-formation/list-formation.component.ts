@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { forEach } from 'lodash';
 import { Observable } from 'rxjs';
 import { Formation } from 'src/app/entities/formation';
 
@@ -18,6 +19,7 @@ export class ListFormationComponent implements OnInit {
     ) { }
   ngOnInit(): void {
     this.formation$ = this.formationService.GetAllFormation();
+
   }
 
 
