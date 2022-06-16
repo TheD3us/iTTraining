@@ -17,6 +17,11 @@ loadChildren: () => import('./connexion/connexion.module').then(m=> m.ConnexionM
 
   },
   {
+    path: 'catalogue',
+      loadChildren: () => import('./catalogue/catalogue.module').then(m => m.CatalogueModule)
+
+  },
+  {
     path: 'accueil',
       loadChildren: () => import('./accueil/accueil.module').then(m => m.AccueilModule)
 
